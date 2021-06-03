@@ -230,8 +230,8 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <button type="submit" class="btn btn-lg btn-primary btn-simpan" id="btn-simpan" data-toggle="modal" data-target="#add_data_prediksi">Proses</button>
-                                                    <a href="#" class="btn btn-lg btn-success">Print</a>
+                                                    <button type="submit" class="btn btn-lg btn-primary btn-simpan" id="btn-simpan" data-toggle="modal" data-target="#add_data_prediksi">Lanjut Proses Simpan</button>
+                                                    <!-- <a href="#" class="btn btn-lg btn-success">Print</a> -->
                                                 </div>
                                             </div>
                                         </div>
