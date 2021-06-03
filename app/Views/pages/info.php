@@ -30,6 +30,8 @@
         <div class="col">
             <div class="card">
                 <!-- Card header -->
+                
+
                 <div class="card-header border-0">
                     <div class="row">
                         <div class="col-10">
@@ -39,8 +41,10 @@
                             <a href="#" class="btn btn-sm btn-success">Import file xls</a>
                         </div>
                     </div>
-                </div>
+                </div>sss
                 <!-- Light table -->
+                <div class="swal" data-swal="<?= session()->get('message'); ?>"></div>
+                
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
@@ -80,7 +84,7 @@
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                                     <a class="dropdown-item" href="#">Print Priview</a>
-                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item btn-hapus" href="/info/delete/<?= $row['id']; ?>">Delete</a>
                                                 </div>
                                             </div>
                                         </td>

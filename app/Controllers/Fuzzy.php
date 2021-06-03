@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 // use App\Controllers\BaseController;
 use App\Models\Info;
+use CodeIgniter\Model;
 use Config\Services;
 use Exception;
 
@@ -51,4 +52,17 @@ class Fuzzy extends BaseController
 			return redirect()->to('/info');
 		}
 	}
+
+	public function delete($id)
+	{
+		$data = new Info();
+		$success = $data->delete($id);
+		if ($success) {
+			session()->setFlashData('message', 'Data Berhasil Dihapus !');
+			return redirect()->to('/info');
+		}
+		
+	}
+
+
 }

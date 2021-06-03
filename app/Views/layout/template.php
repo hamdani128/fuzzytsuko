@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <!-- Icons -->
   <link rel="stylesheet" href="<?= base_url(); ?>/assets/vendor/nucleo/css/nucleo.css" type="text/css">
-  <link rel="stylesheet" href="<?= base_url(); ?>/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="<?= base_url(); ?>/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    type="text/css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/argon.css?v=1.2.0" type="text/css">
 </head>$
@@ -43,7 +44,21 @@
   <!-- Argon JS -->
   <script src="<?= base_url(); ?>/assets/js/argon.js?v=1.2.0"></script>
   <script src="<?= base_url(); ?>/assets/js/fuzzy.js"></script>
-  <script src="<?= base_url(); ?>/assets/vendor/sweetalert2/dist/sweetalert2.all.js"></script>
+  <script src="<?= base_url(); ?>/assets/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <script>
+    const swal = $('.swal').data('swal');
+    if (swal) {
+      Swal.fire({
+        title: 'Good Luck !',
+        text: swal,
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 2000
+      })
+    }
+  </script>
+
+
 </body>
 
 </html>
