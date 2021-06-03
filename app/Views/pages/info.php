@@ -37,14 +37,14 @@
                         <div class="col-10">
                             <h3 class="mb-0">Informasi Data Kopi</h3>
                         </div>
-                        <div class="col-2">
+                        <!-- <div class="col-2">
                             <a href="#" class="btn btn-sm btn-success">Import file xls</a>
-                        </div>
+                        </div> -->
                     </div>
-                </div>sss
+                </div>
                 <!-- Light table -->
                 <div class="swal" data-swal="<?= session()->get('message'); ?>"></div>
-                
+
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
@@ -83,7 +83,7 @@
                                                     <i class="fas fa-ellipsis-v"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                    <a class="dropdown-item" href="#">Print Priview</a>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#add_print">Print Priview</a>
                                                     <a class="dropdown-item btn-hapus" href="/info/delete/<?= $row['id']; ?>">Delete</a>
                                                 </div>
                                             </div>
@@ -129,5 +129,37 @@
     </div>
 
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="add_print" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title">Laporan Produksi Permonth</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                                
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Print</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#exampleModal').on('show.bs.modal', event => {
+        var button = $(event.relatedTarget);
+        var modal = $(this);
+        // Use above variables to manipulate the DOM
+        
+    });
+</script>
 
 <?= $this->endsection(); ?>

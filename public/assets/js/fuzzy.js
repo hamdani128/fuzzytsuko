@@ -104,9 +104,21 @@ $(document).on('click', '#btn-simpan', function () {
 
 $(document).ready(function () {
     $("#submit_add").click(function () {
-        $("#add_data_prediksi").modal();
-        document.getElementById("form_add").action = '/add';
-        $("#form_add").submit();
+        Swal.fire({
+            title: 'Apakah Anda Yakin Data Akan Ditambahkan ?',
+            text: "Apakah Data ini Sudah Valid !",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Save it!'
+        }).then((result) => {
+            if (result.value) {
+                $("#add_data_prediksi").modal();
+                document.getElementById("form_add").action = '/add';
+                $("#form_add").submit();
+            }
+        })
     });
 });
 
@@ -127,4 +139,3 @@ $(document).on('click', '.btn-hapus', function (e) {
         }
     })
 })
-
