@@ -154,12 +154,12 @@
                                         <tbody class="list">
                                             <tr>
                                                 <td>Penjualan Maksimum</td>
-                                                <td id="pnj_maks">12</td>
+                                                <td id="pnj_maks">10.023</td>
                                                 <td>ton</td>
                                             </tr>
                                             <tr>
                                                 <td>Penjualan Minimum</td>
-                                                <td id="pnj_min">8</td>
+                                                <td id="pnj_min">8.252</td>
                                                 <td>ton</td>
                                             </tr>
                                             <tr>
@@ -174,12 +174,12 @@
                                             </tr>
                                             <tr>
                                                 <td>Persediaan Maksimum</td>
-                                                <td id="psd_maks">13,5</td>
+                                                <td id="psd_maks">3.462</td>
                                                 <td>ton</td>
                                             </tr>
                                             <tr>
                                                 <td>Persediaan Minimum</td>
-                                                <td id="psd_min">8</td>
+                                                <td id="psd_min">0.7</td>
                                                 <td>ton</td>
                                             </tr>
                                         </tbody>

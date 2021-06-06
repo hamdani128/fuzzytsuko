@@ -12,22 +12,22 @@ function nilai_penjualan() {
     var pnj_maks = document.getElementById("pnj_maks").innerText;
     var pnj_min = document.getElementById("pnj_min").innerText;
 
-    var c = parseInt(pnj_maks) - parseInt(pnj_min);
+    var c = parseFloat(pnj_maks) - parseFloat(pnj_min);
     var pnj_turun, pnj_naik;
 
-    if (parseFloat(x) < parseInt(pnj_min)) {
+    if (parseFloat(x) < parseFloat(pnj_min)) {
         pnj_turun = 1;
         pnj_naik = 0;
-    } else if (parseFloat(x) > parseInt(pnj_maks)) {
+    } else if (parseFloat(x) > parseFloat(pnj_maks)) {
         pnj_turun = 0;
         pnj_naik = 1;
     } else {
-        pnj_turun = (parseInt(pnj_maks) - parseFloat(x)) / parseInt(c);
-        pnj_naik = (parseFloat(x) - parseInt(pnj_min)) / parseInt(c);
+        pnj_turun = (parseFloat(pnj_maks) - parseFloat(x)) /c;
+        pnj_naik = (parseFloat(x) - parseFloat(pnj_min)) / c;
     }
 
-    document.getElementById('penj_turun').innerHTML = parseFloat(pnj_turun);
-    document.getElementById('penj_naik').innerHTML = parseFloat(pnj_naik);
+    document.getElementById('penj_turun').innerHTML = pnj_turun.toFixed(2);
+    document.getElementById('penj_naik').innerHTML = pnj_naik.toFixed(2);
 
 }
 
@@ -50,8 +50,8 @@ function nilai_produksi() {
         prd_banyak = (parseFloat(a) - parseInt(prd_min)) / parseInt(d);
     }
 
-    document.getElementById('prod_sedikit').innerHTML = parseFloat(prd_sedikit);
-    document.getElementById('prod_banyak').innerHTML = parseFloat(prd_banyak);
+    document.getElementById('prod_sedikit').innerHTML = prd_sedikit.toFixed(2);
+    document.getElementById('prod_banyak').innerHTML = prd_banyak.toFixed(2);
 }
 
 function mencari_nilai_R() {
@@ -70,25 +70,25 @@ function mencari_nilai_R() {
     r1 = Math.min(a, b);
     document.getElementById('r1').innerHTML = parseFloat(r1);
     z1 = (d * r1) + f;
-    document.getElementById('z1').innerHTML = parseFloat(z1);
+    document.getElementById('z1').innerHTML = z1.toFixed(3);
 
     r2 = Math.min(a, h);
     document.getElementById('r2').innerHTML = parseFloat(r2);
     z2 = (d * r2) + c;
-    document.getElementById('z2').innerHTML = parseFloat(z2);
+    document.getElementById('z2').innerHTML = z2.toFixed(3);
 
     r3 = Math.min(e, b);
     document.getElementById('r3').innerHTML = parseFloat(r3);
     z3 = (d * r3) + f;
-    document.getElementById('z3').innerHTML = parseFloat(z3);
+    document.getElementById('z3').innerHTML = z3.toFixed(3);
 
     r4 = Math.min(e, h);
     document.getElementById('r4').innerHTML = parseFloat(r4);
     z4 = (d * r4) + c;
-    document.getElementById('z4').innerHTML = parseFloat(z4);
+    document.getElementById('z4').innerHTML = z4.toFixed(3);
 
     hasil = ((r1 * z1) + (r2 * z2) + (r3 * z3) + (r4 * z4)) / (r1 + r2 + r3 + r4)
-    document.getElementById('val_prediksi').value = hasil.toFixed(2);
+    document.getElementById('val_prediksi').value = hasil.toFixed(3);
 
 }
 
