@@ -38,6 +38,7 @@ $routes->group('', ['filter' => 'login'], function($routes){
 	$routes->get('/prediction', 'Fuzzy::prediksi');
 	$routes->post('/add', 'Fuzzy::save');
 	$routes->get('/info/delete/(:num)', 'Fuzzy::delete/$1');
+	$routes->get('/info/invoice/(:num)', 'Fuzzy::invoice/$1');
 });
 /*
  * --------------------------------------------------------------------

@@ -83,7 +83,7 @@
                                                     <i class="fas fa-ellipsis-v"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#add_print">Print Priview</a>
+                                                    <a class="dropdown-item" href="/info/invoice/<?= $row['id']; ?>">Print Priview</a>
                                                     <a class="dropdown-item btn-hapus" href="/info/delete/<?= $row['id']; ?>">Delete</a>
                                                 </div>
                                             </div>
