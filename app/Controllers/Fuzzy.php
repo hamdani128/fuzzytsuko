@@ -67,8 +67,8 @@ class Fuzzy extends BaseController
     {
         $info = new Info();
         $data = [
-            'title' => 'Invoice | SPK | Metode Fuzzy Tsukomoto',
             'info' => $info->find($id),
+            'title' => 'Invoice | SPK | Metode Fuzzy Tsukomoto',
         ];
         // return view('pages/invoice', $data);
         $mpdf = new Mpdf(['mode' => 'utf-8']);
