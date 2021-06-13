@@ -36,15 +36,23 @@
             color: white;
             text-align: center;
         }
+
+        #judul {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #judul h3 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
     </style>
 </head>
 
 <body>
     <div class="row">
         <div class="col-12">
-            <h1 class="text-center">Report Naga Sanghie</h1>
+            <h1 class="text-center" id="judul">Report Naga Sanghie</h1>
             <hr>
-            <h3>Keterangan Invoice : <?=$info['deskripsi'];?> </h3>
+            <p id="judul">Keterangan Invoice : <?=$info['deskripsi'];?> </p>
         </div>
     </div>
     <div class="row mt-3">
