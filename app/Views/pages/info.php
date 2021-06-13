@@ -1,6 +1,6 @@
-<?= $this->extend('layout/template'); ?>
+<?=$this->extend('layout/template');?>
 
-<?= $this->section('content'); ?>
+<?=$this->section('content');?>
 
 <!-- Header -->
 <div class="header bg-default pb-6">
@@ -30,7 +30,7 @@
         <div class="col">
             <div class="card">
                 <!-- Card header -->
-                
+
 
                 <div class="card-header border-0">
                     <div class="row">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <!-- Light table -->
-                <div class="swal" data-swal="<?= session()->get('message'); ?>"></div>
+                <div class="swal" data-swal="<?=session()->get('message');?>"></div>
 
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
@@ -58,24 +58,24 @@
                             </tr>
                         </thead>
                         <tbody class="list">
-                            <?php $i = 1; ?>
+                            <?php $i = 1;?>
                             <?php if (count($info) > 0) {
-                                foreach ($info as $row) : ?>
+    foreach ($info as $row): ?>
                                     <tr>
                                         <td class="no">
-                                            <?= $i++ ?>
+                                            <?=$i++?>
                                         </td>
                                         <td class="deskripsi">
-                                            <?= $row['deskripsi']; ?>
+                                            <?=$row['deskripsi'];?>
                                         </td>
                                         <td class="Produksi">
-                                            <?= $row['prod_ton']; ?>
+                                            <?=$row['prod_ton'];?>
                                         </td>
                                         <td class="penjualan">
-                                            <?= $row['penj_ton']; ?>
+                                            <?=$row['penj_ton'];?>
                                         </td>
                                         <td class="stok">
-                                            <?= $row['stok_ton']; ?>
+                                            <?=$row['stok_ton'];?>
                                         </td>
                                         <td class="text-right">
                                             <div class="dropdown">
@@ -83,18 +83,18 @@
                                                     <i class="fas fa-ellipsis-v"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                    <a class="dropdown-item" href="/info/invoice/<?= $row['id']; ?>">Print Priview</a>
-                                                    <a class="dropdown-item btn-hapus" href="/info/delete/<?= $row['id']; ?>">Delete</a>
+                                                    <a class="dropdown-item" href="/info/invoice/<?=$row['id'];?>" onclick="basicPopup(this.href);return false">Print Priview</a>
+                                                    <a class="dropdown-item btn-hapus" href="/info/delete/<?=$row['id'];?>">Delete</a>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
-                                <?php endforeach; ?>
-                            <?php } else {  ?>
+                                <?php endforeach;?>
+                            <?php } else {?>
                                 <tr>
                                     <td colspan="5" class="text-center">Tidak Ada Data</td>
                                 </tr>
-                            <?php } ?>
+                            <?php }?>
                         </tbody>
                     </table>
                 </div>
@@ -142,7 +142,7 @@
                     </div>
             <div class="modal-body">
                 <div class="container-fluid">
-                                
+
                 </div>
             </div>
             <div class="modal-footer">
@@ -158,8 +158,8 @@
         var button = $(event.relatedTarget);
         var modal = $(this);
         // Use above variables to manipulate the DOM
-        
+
     });
 </script>
 
-<?= $this->endsection(); ?>
+<?=$this->endsection();?>
