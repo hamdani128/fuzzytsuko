@@ -34,12 +34,12 @@
 
                 <div class="card-header border-0">
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-9">
                             <h3 class="mb-0">Informasi Data Kopi</h3>
                         </div>
-                        <!-- <div class="col-2">
-                            <a href="#" class="btn btn-sm btn-success">Import file xls</a>
-                        </div> -->
+                        <div class="col-3">
+                            <a href="/info/invoice/all" class="btn btn-md btn-primary text-right"><i class="fas fa-print"></i> Cetak Dokumen All</a>
+                        </div>
                     </div>
                 </div>
                 <!-- Light table -->

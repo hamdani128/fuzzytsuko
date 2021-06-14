@@ -39,6 +39,7 @@ $routes->group('', ['filter' => 'login'], function($routes){
 	$routes->post('/add', 'Fuzzy::save');
 	$routes->get('/info/delete/(:num)', 'Fuzzy::delete/$1');
 	$routes->get('/info/invoice/(:num)', 'Fuzzy::invoice/$1');
+	$routes->get('/info/invoice/all', 'Fuzzy::invoice_all');
 });
 /*
  * --------------------------------------------------------------------

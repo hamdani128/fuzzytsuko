@@ -76,4 +76,17 @@ class Fuzzy extends BaseController
         return redirect()->to($mpdf->Output('invoice.pdf', 'I'));
     }
 
+    public function invoice_all()
+    {
+        $info = new Info();
+        $data = [
+            'info' => $info->findAll(),
+            'title' => 'Invoice All | SPK | Metode Fuzzy Tsukomoto',
+        ];
+        // return view('pages/invoice', $data);
+        $mpdf = new Mpdf(['mode' => 'utf-8']);
+        $mpdf->WriteHTML(view('pages/invoice', $data));
+        return redirect()->to($mpdf->Output('invoice_all.pdf', 'I'));
+    }
+
 }
