@@ -61,9 +61,9 @@
                 <table class="table invoice-detail-table" id="customers">
                     <thead>
                         <tr class="thead-default">
-                            <th>Produksi</th>
-                            <th>Penjualan</th>
-                            <th>Prediksi Persediaan</th>
+                            <th>Produksi (ton)</th>
+                            <th>Penjualan (ton)</th>
+                            <th>Prediksi Stok (ton)</th>
                         </tr>
                     </thead>
                     <tbody>
