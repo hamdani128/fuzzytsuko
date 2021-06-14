@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?=$title;?></title>
 
     <style type="text/css">
         @font-face {
@@ -45,16 +45,13 @@
         #logo {
             float: left;
             margin-top: 8px;
-            /* background: url("public/assets/img/theme/logo2.png"); */
+        }
+
+        #logo img {
+            /* src: url('public/assets/img/logo.png'); */
             background-repeat: no-repeat;
             height: 70px;
         }
-
-        /* #logo img {
-            src: url('public/assets/img/logo.png');
-            background-repeat: no-repeat;
-            height: 70px;
-        } */
 
         #company {
             float: right;
@@ -148,8 +145,9 @@
         table .qty {}
 
         table .total {
-            background: #57B223;
-            color: #FFFFFF;
+            background: #F2F6F6;
+            color: #4C4F4F
+;
         }
 
         table td.unit,
@@ -227,19 +225,19 @@
         </div>
     </header>
     <main>
-        <!-- <div id="details" class="clearfix">
+        <div id="details" class="clearfix">
             <div id="client">
                 <div class="to">INVOICE TO:</div>
-                <h2 class="name">John Doe</h2>
-                <div class="address">796 Silver Harbour, TX 79273, US</div>
-                <div class="email"><a href="mailto:john@example.com">john@example.com</a></div>
+                <h2 class="name">Bpk.Wong Fe hung</h2>
+                <div class="address">Jln.Katamso No.56 Medan Johor</div>
+                <div class="email"><a href="mailto:john@example.com">www.nagasanghie.com</a></div>
             </div>
-            <div id="invoice">
+            <!-- <div id="invoice">
                 <h1>INVOICE 3-2-1</h1>
                 <div class="date">Date of Invoice: 01/06/2014</div>
                 <div class="date">Due Date: 30/06/2014</div>
-            </div>
-        </div> -->
+            </div> -->
+        </div>
         <table border="0" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
@@ -253,7 +251,7 @@
             <tbody>
                 <?php $i = 1;?>
                     <?php if (count($info) > 0) {
-    foreach ($info as $row): ?>
+        foreach ($info as $row): ?>
                         <tr>
                             <td class="no"><?=$i++;?></td>
                             <td class="desc">

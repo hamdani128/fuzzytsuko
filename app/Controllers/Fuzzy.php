@@ -85,6 +85,7 @@ class Fuzzy extends BaseController
         ];
         // return view('pages/invoice', $data);
         $mpdf = new Mpdf(['mode' => 'utf-8']);
+        // $mpdf->showImageErrors = true;
         $mpdf->WriteHTML(view('pages/invoice', $data));
         return redirect()->to($mpdf->Output('invoice_all.pdf', 'I'));
     }

@@ -38,7 +38,7 @@
                             <h3 class="mb-0">Informasi Data Kopi</h3>
                         </div>
                         <div class="col-3">
-                            <a href="/info/invoice/all" class="btn btn-md btn-primary text-right"><i class="fas fa-print"></i> Cetak Dokumen All</a>
+                            <a href="/info/invoice/all" class="btn btn-md btn-primary text-right" onclick="basicPopup(this.href);return false"><i class="fas fa-print"></i> Cetak Dokumen All</a>
                         </div>
                     </div>
                 </div>
