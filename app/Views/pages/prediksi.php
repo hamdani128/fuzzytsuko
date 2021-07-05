@@ -1,6 +1,6 @@
-<?= $this->extend('layout/template'); ?>
+<?=$this->extend('layout/template');?>
 
-<?= $this->section('content'); ?>
+<?=$this->section('content');?>
 
 <div class="header bg-default pb-6">
     <div class="container-fluid">
@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col">
             <div class="card">
-                <div class="swal" data-swal="<?= session()->get('message'); ?>"></div>
+                <div class="swal" data-swal="<?=session()->get('message');?>"></div>
                 <!-- Card header -->
                 <div class="card-header border-0">
                     <div class="row">
@@ -154,32 +154,32 @@
                                         <tbody class="list">
                                             <tr>
                                                 <td>Penjualan Maksimum</td>
-                                                <td id="pnj_maks">10.023</td>
+                                                <td id="pnj_maks"><?=$penj_max;?></td>
                                                 <td>ton</td>
                                             </tr>
                                             <tr>
                                                 <td>Penjualan Minimum</td>
-                                                <td id="pnj_min">8.252</td>
+                                                <td id="pnj_min"><?= $penj_min; ?></td>
                                                 <td>ton</td>
                                             </tr>
                                             <tr>
                                                 <td>Jumlah Produksi Maksimum</td>
-                                                <td id="prd_maks">12</td>
+                                                <td id="prd_maks"><?=$prod_max;?></td>
                                                 <td>ton</td>
                                             </tr>
                                             <tr>
                                                 <td>Jumlah Produksi Minimum</td>
-                                                <td id="prd_min">10</td>
+                                                <td id="prd_min"><?=$prod_min;?></td>
                                                 <td>ton</td>
                                             </tr>
                                             <tr>
                                                 <td>Persediaan Maksimum</td>
-                                                <td id="psd_maks">3.462</td>
+                                                <td id="psd_maks"><?=$stok_max;?></td>
                                                 <td>ton</td>
                                             </tr>
                                             <tr>
                                                 <td>Persediaan Minimum</td>
-                                                <td id="psd_min">0.7</td>
+                                                <td id="psd_min"><?=$stok_min;?></td>
                                                 <td>ton</td>
                                             </tr>
                                         </tbody>
@@ -199,21 +199,26 @@
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="">Produksi :</label>
-                                                        <input type="text" name="" id="val_produksi" class="form-control" placeholder="" aria-describedby="helpId">
+                                                        <input type="text" name="" id="val_produksi"
+                                                            class="form-control" placeholder=""
+                                                            aria-describedby="helpId">
                                                         <small id="helpId" class="text-muted">Harap Wajib Disi</small>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="">Penjualan :</label>
-                                                        <input type="text" name="" id="val_penjualan" class="form-control" placeholder="" aria-describedby="helpId">
+                                                        <input type="text" name="" id="val_penjualan"
+                                                            class="form-control" placeholder=""
+                                                            aria-describedby="helpId">
                                                         <small id="helpId" class="text-muted">Harap Wajib Disi</small>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <a href="#" class="btn btn-lg btn-default fuzzyfikasi" id="fuzzyfikasi">Proses Fuzzyfikasi</a>
+                                                    <a href="#" class="btn btn-lg btn-default fuzzyfikasi"
+                                                        id="fuzzyfikasi">Proses Fuzzyfikasi</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -223,14 +228,18 @@
                                                 <div class="col-12">
                                                     <div class="form-group">
                                                         <label for="">Hasil Prediksi Persediaan :</label>
-                                                        <input type="text" name="" id="val_prediksi" class="form-control" placeholder="" aria-describedby="helpId">
+                                                        <input type="text" name="" id="val_prediksi"
+                                                            class="form-control" placeholder=""
+                                                            aria-describedby="helpId">
                                                         <small id="helpId" class="text-muted">Harap Wajib Disi</small>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <button type="submit" class="btn btn-lg btn-primary btn-simpan" id="btn-simpan" data-toggle="modal" data-target="#add_data_prediksi">Lanjut Proses Simpan</button>
+                                                    <button type="submit" class="btn btn-lg btn-primary btn-simpan"
+                                                        id="btn-simpan" data-toggle="modal"
+                                                        data-target="#add_data_prediksi">Lanjut Proses Simpan</button>
                                                     <!-- <a href="#" class="btn btn-lg btn-success">Print</a> -->
                                                 </div>
                                             </div>
@@ -253,7 +262,8 @@
     </div>
 
     <!-- Modal Simoan -->
-    <div class="modal fade" id="add_data_prediksi" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal fade" id="add_data_prediksi" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -268,19 +278,23 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label for="">Produksi</label>
-                                    <input type="text" name="produksi" id="produksi" class="form-control" placeholder="" aria-describedby="helpId">
+                                    <input type="text" name="produksi" id="produksi" class="form-control" placeholder=""
+                                        aria-describedby="helpId">
                                 </div>
                                 <div class="form-group">
                                     <label for="">Penjualan</label>
-                                    <input type="text" name="penjualan" id="penjualan" class="form-control" placeholder="" aria-describedby="helpId">
+                                    <input type="text" name="penjualan" id="penjualan" class="form-control"
+                                        placeholder="" aria-describedby="helpId">
                                 </div>
                                 <div class="form-group">
                                     <label for="">Persediaan</label>
-                                    <input type="text" name="persediaan" id="persediaan" class="form-control" placeholder="" aria-describedby="helpId">
+                                    <input type="text" name="persediaan" id="persediaan" class="form-control"
+                                        placeholder="" aria-describedby="helpId">
                                 </div>
                                 <div class="form-group">
                                     <label for="">Catatan :</label>
-                                    <textarea name="deskripsi" id="deskripsi" cols="30" rows="3" class="form-control"></textarea>
+                                    <textarea name="deskripsi" id="deskripsi" cols="30" rows="3"
+                                        class="form-control"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -298,4 +312,4 @@
 
 </div>
 
-<?= $this->endsection(); ?>
+<?=$this->endsection();?>

@@ -11,7 +11,8 @@
 		"codeigniter4/framework": "^4",
 		"myth/auth": "^1.0@beta",
 		"tecnickcom/tcpdf": "^6.4",
-		"mpdf/mpdf": "^8.0"
+		"mpdf/mpdf": "^8.0",
+		"phpoffice/phpspreadsheet": "^1.18"
 	},
 	"require-dev": {
 		"fakerphp/faker": "^1.9",

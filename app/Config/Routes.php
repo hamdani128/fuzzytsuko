@@ -8,7 +8,7 @@ $routes = Services::routes();
 // Load the system's routing file first, so that the app and ENVIRONMENT
 // can override as needed.
 if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
-	require SYSTEMPATH . 'Config/Routes.php';
+    require SYSTEMPATH . 'Config/Routes.php';
 }
 
 /**
@@ -32,14 +32,16 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-$routes->group('', ['filter' => 'login'], function($routes){
-	$routes->get('/', 'Home::index');
-	$routes->get('/info', 'Fuzzy::info');
-	$routes->get('/prediction', 'Fuzzy::prediksi');
-	$routes->post('/add', 'Fuzzy::save');
-	$routes->get('/info/delete/(:num)', 'Fuzzy::delete/$1');
-	$routes->get('/info/invoice/(:num)', 'Fuzzy::invoice/$1');
-	$routes->get('/info/invoice/all', 'Fuzzy::invoice_all');
+$routes->group('', ['filter' => 'login'], function ($routes) {
+    $routes->get('/', 'Home::index');
+    $routes->get('/info', 'Fuzzy::info');
+    $routes->get('/prediction', 'Fuzzy::prediksi');
+    $routes->post('/add', 'Fuzzy::save');
+    $routes->get('/info/delete/(:num)', 'Fuzzy::delete/$1');
+
+    $routes->get('/info/invoice/(:num)', 'Fuzzy::invoice/$1');
+    $routes->get('/info/invoice/all', 'Fuzzy::invoice_all');
+    $routes->post('/info/import', 'Fuzzy::import');
 });
 /*
  * --------------------------------------------------------------------
@@ -55,5 +57,5 @@ $routes->group('', ['filter' => 'login'], function($routes){
  * needing to reload it.
  */
 if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
-	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
+    require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
